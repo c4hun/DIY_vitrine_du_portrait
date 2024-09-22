@@ -1,24 +1,126 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
-
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+        <!-- Masthead-->
+        <header class="masthead">
+            <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+                <div class="d-flex justify-content-center">
+                    <div class="text-center">
+                        <h1 class="mx-0 my-1 text-uppercase">ようこそ、おこしやす</h1>
+                        <h2 class="text-white-50 mx-auto mt-2 mb-5">今日はいかがでしょうか？</h2>
+                        <a class="btn btn-primary" href="#about">では、ご案内頂きます</a>
+                    </div>
+                </div>
+            </div>
+        </header>
 
-<div class="example-wrapper">
-    <h1>Hello {{ salutation_object }}! ❤⃛</h1>
+        <!-- About-->
+        <section class="about-section text-center" id="about">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2 class="text-white mb-4">前座</h2>
+                        <li>フランスの南地方に滞在の留学生「サシャ」と申します。
+                        <li>ただいまLinuxやPHPが勉強してまいります。</br>
 
-    皆さんへおはようございまして、
+                        <p class="text-white-50">
+                        錦瑟無端五十弦，一弦一柱思華年。</br>
+                        莊生曉夢迷蝴蝶，望帝春心托杜鵑。</br>
+                        滄海月明珠有淚，藍田日暖玉生煙。</br>
+                        此情可待成追憶，只是當時已惘然。</p>
+                        <a href="https://ctext.org/wiki.pl?if=gb&chapter=37663">《李商隱詩選》</a>
+                    </div>
+                </div>
+                <img class="img-fluid" src="{{ asset('assets/img/chPoetry.gif') }}" alt="壱..." />
+            </div>
+        </section>
 
-    {% for name in myarray %}
-        <li>{{ name }}</li>
-    {% endfor %}
-    <ul>
-        <li>秋になると、</li>
-        <li>お体をご自愛いただいてありがとうご存じます</li>
-    </ul>
-</div>
+        <!-- Projects-->
+        <section class="projects-section bg-light" id="projects">
+            <div class="container px-4 px-lg-5">
+                <!-- Featured Project Row-->
+                <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                    <div class="col-xl-8 col-lg-7"><img class="img-fluid mb-3 mb-lg-0" src="{{ asset('assets/img/jenkinsTerminal.gif') }}" alt="弐..." /></div>
+                    <div class="col-xl-4 col-lg-5">
+                        <div class="featured-text text-center text-lg-left">
+                            <h4>サーバ自動化</h4>
+                            <p class="text-black-50 mb-0">Jenkins、AnsibleそしてDocker活用して開発環境自動化のために精進しております。</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project One Row-->
+                <div class="row gx-0 mb-5 mb-lg-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ asset('assets/img/eCommerce.gif') }}" alt="参..." /></div>
+                    <div class="col-lg-6">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-left">
+                                    <h4 class="text-white">Eコマースの開発</h4>
+                                    <p class="mb-0 text-white-50">SymfonyとBootstrapのうえでプロジェクトのメンバーや目録など役立ちの構築が実践でございます。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Two Row-->
+                <div class="row gx-0 justify-content-center">
+                    <div class="col-lg-6"><img class="img-fluid" src="{{ asset('assets/img/shokuDou.jpg') }}" alt="四..." /></div>
+                    <div class="col-lg-6 order-lg-first">
+                        <div class="bg-black text-center h-100 project">
+                            <div class="d-flex h-100">
+                                <div class="project-text w-100 my-auto text-center text-lg-right">
+                                    <h4 class="text-white">中華とヤマト文化</h4>
+                                    <p class="mb-0 text-white-50">漢詩：阮嗣宗、溫飛卿、李義山と寒山子</p>
+                                    <p class="mb-0 text-white-50">建築：お寺、神社、庭園と温泉</p>
+                                    <p class="mb-0 text-white-50">他のこと：のう、生け花、書道とお茶道</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact-->
+        <section class="contact-section bg-black" id="contact">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-map-marked-alt text-light mb-2"></i>
+                                <h4 class="text-uppercase m-0">住所</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">トゥールーズ、フランス</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">電子メール</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="#!">vms.j88uh@slmail.me</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">電話番号</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50">恐縮ですが、電子メールご愛用いただきます。</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="social d-flex justify-content-center">
+                    <a class="mx-2" href="#about"><i class="fab fa-instagram"></i></a>
+                    <a class="mx-2" href="https://www.linkedin.com/in/so4oh/"><i class="fab fa-linkedin-in"></i></a>
+                    <a class="mx-2" href="https://github.com/c4hun"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </section>
 {% endblock %}
