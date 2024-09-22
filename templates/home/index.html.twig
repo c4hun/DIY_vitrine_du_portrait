@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}ご挨拶{% endblock %}
+{% block title %}{% endblock %}
 
 {% block body %}
 <style>
@@ -12,6 +12,10 @@
     <h1>Hello {{ salutation_object }}! ❤⃛</h1>
 
     皆さんへおはようございまして、
+
+    {% for name in myarray %}
+        <li>{{ name }}</li>
+    {% endfor %}
     <ul>
         <li>秋になると、</li>
         <li>お体をご自愛いただいてありがとうご存じます</li>

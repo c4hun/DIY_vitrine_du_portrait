@@ -12,9 +12,11 @@ class HomeController extends AbstractController
     public function index(): Response
     {
         $firstname = " World";
+        $myarray = ["ゆうた","あやか","はるこ","えり"];
 
         return $this->render('home/index.html.twig', [
             'salutation_object' => $firstname,
+            'myarray' => $myarray
         ]);
     }
 }
